@@ -2,7 +2,7 @@
 
 [![VS Code Marketplace](https://img.shields.io/badge/VS%20Code-Marketplace-blue)](https://marketplace.visualstudio.com/items?itemName=SMI-Lab.openfast-rosco-syntax-highlighting)
 
-Unofficial VS Code extension for OpenFAST input files and ROSCO controller input files.
+Unofficial VS Code extension for OpenFAST input and output files and ROSCO controller input files.
 
 ## Features
 
