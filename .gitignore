@@ -1,5 +1,8 @@
 *.vsix
 
+# Internal development files
+CLAUDE.md
+
 # OpenFAST sample data and reference files
 IEA-15-240-RWT/
 IEA-15-240-RWT-UMaineSemi/
