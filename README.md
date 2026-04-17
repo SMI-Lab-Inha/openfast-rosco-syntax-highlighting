@@ -15,9 +15,27 @@ Unofficial VS Code extension for OpenFAST input files and ROSCO controller input
   - parameter names in the common `value  parameter  - description` layout
   - `!` comments and trailing inline descriptions
 
+## Installation
+
+**From the VS Code Marketplace (recommended):**
+
+1. Open VS Code.
+2. Go to the Extensions view (`Ctrl+Shift+X`).
+3. Search for **OpenFAST ROSCO Syntax Highlighting**.
+4. Click **Install**.
+
+**From a `.vsix` file:**
+
+1. Download the `.vsix` file from the [Releases](https://github.com/SMI-Lab-Inha/openfast-rosco-syntax-highlighting/releases) page.
+2. Open VS Code and go to the Extensions view (`Ctrl+Shift+X`).
+3. Click the `...` menu at the top right and select **Install from VSIX...**.
+4. Select the downloaded file.
+
+Once installed, any file with a supported extension (`.fst`, `.dat`, `.in`, `.inp`, etc.) will be highlighted automatically.
+
 ## Scope
 
-The grammar is built from real OpenFAST and ROSCO sample files in this repository, not from a generic INI or config grammar.
+The grammar is built from real OpenFAST and ROSCO sample files, not from a generic INI or config grammar.
 
 It is designed to make engineering input decks easier to read without trying to fully parse every module format.
 
@@ -41,10 +59,7 @@ To package for sharing or publication:
 1. Install `vsce`
 2. Run `vsce package`
 
-This repository includes a `.vscodeignore` file so the sample turbine data is not bundled into the published extension.
-
 ## Notes
 
-- The initial migration reference was `openfast_udl.xml`, but the grammar behavior is guided by the real sample files.
 - Because `.dat` and `.in` are generic extensions, this extension may also match non-OpenFAST files if enabled globally.
 - ROSCO YAML files are intentionally not claimed by this extension because standard YAML support in VS Code is usually the better default.
