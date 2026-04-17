@@ -27,7 +27,7 @@ Requires `vsce` installed globally (`npm install -g @vscode/vsce`). The `.vscode
 - [syntaxes/openfast.tmLanguage.json](syntaxes/openfast.tmLanguage.json) — the TextMate grammar; all highlighting logic lives here
 - [package.json](package.json) — extension manifest; defines file extension associations (`.fst`, `.dat`, `.in`, `.inp`, `.out`, `.ipt`, `.ech`, `.wnd`, `.sum`, `.bmi`) and links to the grammar
 - [language-configuration.json](language-configuration.json) — comment character (`!`), bracket pairs, auto-closing pairs
-- [openfast_udl.xml](openfast_udl.xml) — original Notepad++ UDL reference (migration aid only; grammar decisions should be driven by real sample files)
+- `openfast_udl.xml` — original Notepad++ UDL reference kept locally only (not in repo); grammar decisions should be driven by real sample files
 
 ## Grammar Architecture
 
@@ -54,7 +54,7 @@ The grammar (`source.openfast`) applies patterns in priority order:
 
 ## Sample Files (Acceptance Corpus)
 
-Real OpenFAST files used to validate grammar behavior. If the UDL and these files disagree, prefer what works on these:
+The IEA-15-240-RWT turbine files are kept locally (excluded from the repo via `.gitignore`) and used to validate grammar behavior. Representative files to test against:
 
 - `IEA-15-240-RWT-UMaineSemi/Main_6_1.fst` — top-level `.fst` driver
 - `IEA-15-240-RWT-UMaineSemi/IEA-15-240-RWT-UMaineSemi_AeroDyn.dat` — AeroDyn module
@@ -69,4 +69,3 @@ Real OpenFAST files used to validate grammar behavior. If the UDL and these file
 - Fortran double-precision scientific notation uses `D`/`d` as exponent separator (e.g., `1.464D-05`)
 - Parameter names may include array indexing: `BDBldFile(1)`, `WaveKinGridxi(1,1)`
 - ROSCO YAML files are intentionally not claimed by this extension (VS Code's built-in YAML handles them)
-- Treat `openfast_udl.xml` as a migration aid only — validate all grammar decisions against real sample files
