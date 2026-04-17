@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.4
+
+- Added TurbSim to extension name, description, and keywords
+
 ## 0.0.3
 
 - Improved highlighting for OpenFAST output (`.out`) files
