@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.6
+
+- Fixed inline `!` comments: now the full comment text after `!` is highlighted, not just the `!` character itself
+
 ## 0.0.5
 
 - Fixed `parameter-names` falsely matching identifiers before negative numbers (e.g. `fixed` before `-837.8`)

@@ -325,8 +325,8 @@
     "bang-comments": {
       "patterns": [
         {
-          "name": "punctuation.definition.comment.openfast",
-          "match": "(?<=\\s)!\\s*"
+          "name": "comment.line.bang.openfast",
+          "match": "(?<=\\S)\\s+!.*$"
         }
       ]
     },
