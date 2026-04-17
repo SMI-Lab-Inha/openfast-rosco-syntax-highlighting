@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.5
+
+- Fixed `parameter-names` falsely matching identifiers before negative numbers (e.g. `fixed` before `-837.8`)
+- Added `vessel` and `Pinned` to MoorDyn keywords; made MoorDyn keyword matching case-insensitive
+- Fixed `table-headers` to recognize column names containing `/` and `.` (e.g. `BA/-zeta`)
+
 ## 0.0.4
 
 - Added TurbSim to extension name, description, and keywords
