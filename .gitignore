@@ -1,0 +1,6 @@
+*.vsix
+
+# Large simulation output/binary files
+*.out
+*.dbg
+*.bts

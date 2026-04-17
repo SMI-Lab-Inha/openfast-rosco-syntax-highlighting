@@ -1,0 +1,63 @@
+--------------------- MoorDyn Input File ------------------------------------
+IEA 15 MW offshore reference model on UMaine VolturnUS-S semi-submersible floating platform mooring model- C. Allen UMaine                                          
+FALSE    Echo      - echo the input file data (flag)                                            
+----------------------- LINE TYPES ------------------------------------------
+Name  Diam  MassDen  EA       BA/-zeta  EI    Cd    Ca    CdAx   CaAx
+(-)   (m)   (kg/m)   (N)      (N-s/-)   (-)   (-)   (-)   (-)    (-)
+poly_181   0.1438  22.42     1.59e8     -1.0       0.0       1.6    1.0    0.1     0.1
+chain_155  0.2791  480.93    2.058e9    -1.0       0.0       2.4    1.0    1.15    1.0
+bend_stiff 0.1600  36.70     4.69e8     -1.0       2.50e4    1.2    1.0    0.008   0.0
+bare_cable 0.1600  36.70     4.69e8     -1.0       1.99e4    1.2    1.0    0.000   0.0
+buoy_cable 0.300  60.85     4.69e8     -1.0       1.99e4    1.2    1.0    0.000   0.0
+---------------------- ROD TYPES ---------------------------------------------------------------
+TypeName Diam Mass/m Cd Ca CdEnd CaEnd
+(name) (m) (kg/m) (-) (-) (-) (-)
+connector  0.0100  0.00      0.0    0.0     0.0      0.0
+---------------------- POINTS --------------------------------                                           
+ID   Type      X         Y       Z       M    V    CdA   CA
+(-)  (-)      (m)       (m)     (m)    (kg) (m^3) (m^2) (-)
+1     Coupled    -58.000      0.000      -14.000    0     0      0      0
+2     Free       -215.360     0.000      -137.120   0     0      0      0
+3     Fixed      -700.000     0.000      -200.000   0     0      0      0
+4     Coupled     29.000      50.229     -14.000    0     0      0      0
+5     Free        107.680    186.510     -137.120   0     0      0      0
+6     Fixed       350.000    606.218     -200.000   0     0      0      0
+7     Coupled     29.000     -50.229     -14.000    0     0      0      0
+8     Free        107.680   -186.510     -137.120   0     0      0      0
+9     Fixed       350.000   -606.218     -200.000   0     0      0      0
+---------------------- RODS --------------------------------------------------------------------
+ID RodType Attachment Xa Ya Za Xb Yb Zb NumSegs RodOutputs
+(#) (name) (#/key) (m) (m) (m) (m) (m) (m) (-) (-)
+1    connector  Coupled      5.000    0.000  -14.000   5.001    0.000  -14.000   0        -
+2    connector  Free         8.000    0.000  -19.196   8.001    0.000  -19.196   0        -
+3    connector  Free         53.000   0.000  -156.000   53.001  0.000  -156.000   0        -
+4    connector  Free         95.0     0.000  -178.000   95.001  0.000  -178.000   0        -
+5    connector  Fixed        205.000  0.000  -200.000  205.001  0.000  -200.000  0        -
+---------------------- LINES --------------------------------------                                           
+ID  LineType  AttachA   AttachB  UnstrLen  NumSegs  Outputs
+(-)   (-)       (-)       (-)      (m)       (-)      (-)
+1    poly_181    2         1         199.8       30        -
+2    chain_155   3         2         497.7       60        -
+3    poly_181    5         4         199.8       30        -
+4    chain_155   6         5         497.7       60        -
+5    poly_181    8         7         199.8       30        -
+6    chain_155   9         8         497.7       60        -
+7    bend_stiff  R2A       R1B       6.000       2         -
+8    bare_cable  R3A       R2B       165.978     30        -
+9    buoy_cable  R4A       R3B       60.000      12        -
+10   bare_cable  R5A       R4B       121.527     20        -
+---------------------- SOLVER OPTIONS ---------------------------------------
+0.001    dtM        - time step to use in mooring integration (s)
+RK4      tScheme    - time integration scheme
+3.0e8    kbot       - bottom stiffness (Pa/m)
+3.0e5    cbot       - bottom damping (Pa-s/m)
+10.0     dtIC       - time interval for analyzing convergence during IC gen (s)
+300.0    TmaxIC     - max time for IC gen (s)
+30.0     CdScaleIC  - factor by which to scale drag coefficients during IC gen (-)
+0.005     threshIC   - threshold for IC convergence (-)                              
+------------------------ OUTPUTS --------------------------------------------
+FAIRTEN1
+FAIRTEN3
+FAIRTEN5                                                                          
+END                                         
+------------------------- need this line --------------------------------------     

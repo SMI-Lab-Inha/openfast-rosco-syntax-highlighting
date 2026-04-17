@@ -1,0 +1,339 @@
+{
+  "name": "OpenFAST",
+  "scopeName": "source.openfast",
+  "fileTypes": [
+    "fst",
+    "dat",
+    "in",
+    "inp",
+    "out",
+    "ipt",
+    "ech",
+    "wnd",
+    "sum",
+    "bmi"
+  ],
+  "patterns": [
+    {
+      "include": "#file-opening"
+    },
+    {
+      "include": "#full-line-comments"
+    },
+    {
+      "include": "#section-banners"
+    },
+    {
+      "include": "#end-marker"
+    },
+    {
+      "include": "#quoted-special-values"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#special-values"
+    },
+    {
+      "include": "#moordyn-keywords"
+    },
+    {
+      "include": "#vtk-keywords"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#parameter-names"
+    },
+    {
+      "include": "#table-headers"
+    },
+    {
+      "include": "#units-rows"
+    },
+    {
+      "include": "#trailing-descriptions"
+    },
+    {
+      "include": "#typed-annotations"
+    },
+    {
+      "include": "#available-options"
+    },
+    {
+      "include": "#bang-comments"
+    },
+    {
+      "include": "#punctuation"
+    }
+  ],
+  "repository": {
+    "file-opening": {
+      "patterns": [
+        {
+          "name": "markup.heading.openfast",
+          "match": "\\A(?:[^\\r\\n]+(?:\\r?\\n|$)){1,2}"
+        }
+      ]
+    },
+    "full-line-comments": {
+      "patterns": [
+        {
+          "name": "comment.line.bang.openfast",
+          "match": "^\\s*!.*$"
+        }
+      ]
+    },
+    "section-banners": {
+      "patterns": [
+        {
+          "name": "markup.heading.openfast",
+          "match": "^\\s*(?:[-=]{3,}.*[-=]{3,}|[-=]{3,})\\s*$"
+        }
+      ]
+    },
+    "end-marker": {
+      "patterns": [
+        {
+          "name": "keyword.control.end.openfast",
+          "match": "(?i)^(?:\\s{0,2})END\\b"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.path.openfast",
+          "begin": "@?\"(?=(?:[A-Za-z]:\\\\|\\.\\.?/|[^\"\\r\\n]*[\\\\/][^\"\\r\\n]*|[^\"\\r\\n]*\\.[A-Za-z0-9]{1,8}))",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.openfast"
+            }
+          },
+          "end": "\"",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.openfast"
+            }
+          },
+          "patterns": [
+            {
+              "name": "constant.language.special-value.openfast",
+              "match": "(?i)\\b(?:default|unused|none)\\b"
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.double.openfast",
+          "begin": "@?\"",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.openfast"
+            }
+          },
+          "end": "\"",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.openfast"
+            }
+          },
+          "patterns": [
+            {
+              "name": "constant.language.special-value.openfast",
+              "match": "(?i)\\b(?:default|unused|none)\\b"
+            }
+          ]
+        }
+      ]
+    },
+    "quoted-special-values": {
+      "patterns": [
+        {
+          "name": "constant.language.special-value.quoted.openfast",
+          "match": "(?i)\"(?:default|unused|none|true|false)\""
+        }
+      ]
+    },
+    "special-values": {
+      "patterns": [
+        {
+          "name": "constant.language.boolean.openfast",
+          "match": "(?i)\\b(?:true|false)\\b"
+        },
+        {
+          "name": "constant.language.special-value.openfast",
+          "match": "(?i)\\b(?:default|unused|none)\\b"
+        }
+      ]
+    },
+    "moordyn-keywords": {
+      "patterns": [
+        {
+          "name": "keyword.other.moordyn.openfast",
+          "match": "\\b(?:Free|Fixed|Coupled)\\b"
+        }
+      ]
+    },
+    "vtk-keywords": {
+      "patterns": [
+        {
+          "name": "keyword.other.vtk.openfast",
+          "match": "\\b(?:WrVTK|VTK_type|VTK_fields|VTK_fps)\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.openfast",
+          "match": "(?<![\\w.])[-+]?(?:\\d+\\.\\d*|\\.\\d+|\\d+)(?:[eEdD][-+]?\\d+)?(?![\\w.])"
+        }
+      ]
+    },
+    "parameter-names": {
+      "patterns": [
+        {
+          "name": "variable.parameter.openfast",
+          "match": "(?<!\\S)[A-Za-z][A-Za-z0-9_]*(?:\\([^)]+\\))?(?=\\s+(?:-|!))"
+        },
+        {
+          "name": "variable.parameter.openfast",
+          "match": "(?<=!\\s)[A-Za-z][A-Za-z0-9_]*(?:\\([^)]+\\))?(?=\\s+-)"
+        }
+      ]
+    },
+    "table-headers": {
+      "patterns": [
+        {
+          "name": "support.type.table-header.openfast",
+          "match": "^(?=.*[A-Za-z])(?!(?:\\s*!|\\s*[-=]{3,}|\\s{0,2}END\\b))\\s*(?:[A-Za-z][A-Za-z0-9_]*(?:\\([^)]+\\))?\\s+){1,}[A-Za-z][A-Za-z0-9_]*(?:\\([^)]+\\))?\\s*$"
+        }
+      ]
+    },
+    "units-rows": {
+      "patterns": [
+        {
+          "name": "meta.annotation.units.openfast",
+          "match": "^\\s*(?:\\([^()\\r\\n]+\\)\\s*){2,}$"
+        }
+      ]
+    },
+    "trailing-descriptions": {
+      "patterns": [
+        {
+          "name": "comment.line.description.openfast",
+          "begin": "(?<=\\s)-\\s(?=[^\\[{(])",
+          "end": "$",
+          "patterns": [
+            {
+              "include": "#available-options"
+            },
+            {
+              "include": "#typed-annotations"
+            }
+          ]
+        }
+      ]
+    },
+    "typed-annotations": {
+      "patterns": [
+        {
+          "name": "storage.type.annotation.openfast",
+          "match": "(?i)\\((?:flag|switch|string|quoted string|quoted strings)\\)"
+        }
+      ]
+    },
+    "available-options": {
+      "patterns": [
+        {
+          "name": "meta.braces.options.openfast",
+          "begin": "\\{",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.section.braces.begin.openfast"
+            }
+          },
+          "end": "\\}",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.section.braces.end.openfast"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#special-values"
+            },
+            {
+              "include": "#numbers"
+            },
+            {
+              "name": "constant.other.option.openfast",
+              "match": "[A-Za-z_][A-Za-z0-9_+./-]*"
+            },
+            {
+              "name": "punctuation.separator.sequence.openfast",
+              "match": "[=;,:]"
+            }
+          ]
+        },
+        {
+          "name": "meta.brackets.options.openfast",
+          "begin": "\\[",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.section.brackets.begin.openfast"
+            }
+          },
+          "end": "\\]",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.section.brackets.end.openfast"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#special-values"
+            },
+            {
+              "include": "#numbers"
+            },
+            {
+              "name": "constant.other.option.openfast",
+              "match": "[A-Za-z_][A-Za-z0-9_+./-]*"
+            },
+            {
+              "name": "punctuation.separator.sequence.openfast",
+              "match": "[=;,:]"
+            }
+          ]
+        }
+      ]
+    },
+    "bang-comments": {
+      "patterns": [
+        {
+          "name": "punctuation.definition.comment.openfast",
+          "match": "(?<=\\s)!\\s*"
+        }
+      ]
+    },
+    "punctuation": {
+      "patterns": [
+        {
+          "name": "punctuation.section.braces.openfast",
+          "match": "[{}]"
+        },
+        {
+          "name": "punctuation.section.brackets.openfast",
+          "match": "[\\[\\]]"
+        },
+        {
+          "name": "punctuation.section.parens.openfast",
+          "match": "[()]"
+        }
+      ]
+    }
+  }
+}

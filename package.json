@@ -1,0 +1,65 @@
+{
+  "name": "openfast-rosco-syntax-highlighting",
+  "displayName": "OpenFAST & ROSCO Syntax Highlighting",
+  "description": "Syntax highlighting for OpenFAST input files and ROSCO controller input files in Visual Studio Code.",
+  "version": "0.0.2",
+  "publisher": "SMI-Lab",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SMI-Lab-Inha/openfast-rosco-syntax-highlighting.git"
+  },
+  "license": "MIT",
+  "icon": "media/icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "openfast",
+    "rosco",
+    "fast",
+    "wind",
+    "offshore",
+    "simulation",
+    "syntax",
+    "highlighting"
+  ],
+  "galleryBanner": {
+    "color": "#12384d",
+    "theme": "dark"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "openfast",
+        "aliases": [
+          "OpenFAST",
+          "openfast",
+          "ROSCO"
+        ],
+        "extensions": [
+          ".fst",
+          ".dat",
+          ".in",
+          ".inp",
+          ".out",
+          ".ipt",
+          ".ech",
+          ".wnd",
+          ".sum",
+          ".bmi"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "openfast",
+        "scopeName": "source.openfast",
+        "path": "./syntaxes/openfast.tmLanguage.json"
+      }
+    ]
+  }
+}
