@@ -1,14 +1,15 @@
-# OpenFAST & ROSCO Syntax Highlighting
+# OpenFAST, ROSCO & TurbSim Syntax Highlighting
 
 [![VS Code Marketplace](https://img.shields.io/badge/VS%20Code-Marketplace-blue)](https://marketplace.visualstudio.com/items?itemName=SMI-Lab.openfast-rosco-syntax-highlighting)
 
-Unofficial VS Code extension for OpenFAST input and output files and ROSCO controller input files.
+Unofficial VS Code extension for OpenFAST, ROSCO, and TurbSim input and output files.
 
 ## Features
 
 - Syntax highlighting for OpenFAST-style text input files such as `.fst`, `.dat`, `.in`, `.inp`, `.out`, `.ipt`, `.ech`, `.wnd`, `.sum`, and `.bmi`
 - Support for common OpenFAST module files including AeroDyn, ElastoDyn, HydroDyn, InflowWind, MoorDyn, ServoDyn, SeaState, and related driver files
 - Support for ROSCO-style `DISCON.in` controller files
+- Support for TurbSim input files (`.inp`)
 - Highlighting for:
   - section banners and `END` markers
   - booleans and special values like `default`, `unused`, and `none`
@@ -37,7 +38,7 @@ Once installed, any file with a supported extension (`.fst`, `.dat`, `.in`, `.in
 
 ## Scope
 
-The grammar is built from real OpenFAST and ROSCO sample files, not from a generic INI or config grammar.
+The grammar is built from real OpenFAST, ROSCO, and TurbSim sample files, not from a generic INI or config grammar.
 
 It is designed to make engineering input decks easier to read without trying to fully parse every module format.
 

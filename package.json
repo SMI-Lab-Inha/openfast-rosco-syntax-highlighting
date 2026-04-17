@@ -1,7 +1,7 @@
 {
   "name": "openfast-rosco-syntax-highlighting",
-  "displayName": "OpenFAST & ROSCO Syntax Highlighting",
-  "description": "Syntax highlighting for OpenFAST input files and ROSCO controller input files in Visual Studio Code.",
+  "displayName": "OpenFAST, ROSCO & TurbSim Syntax Highlighting",
+  "description": "Syntax highlighting for OpenFAST, ROSCO, and TurbSim input and output files in Visual Studio Code.",
   "version": "0.0.3",
   "publisher": "SMI-Lab",
   "repository": {
@@ -19,6 +19,7 @@
   "keywords": [
     "openfast",
     "rosco",
+    "turbsim",
     "fast",
     "wind",
     "offshore",
