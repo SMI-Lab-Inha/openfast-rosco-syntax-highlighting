@@ -1,6 +1,6 @@
 *.vsix
 
-# Large simulation output/binary files
-*.out
-*.dbg
-*.bts
+# OpenFAST sample data and reference files
+IEA-15-240-RWT/
+IEA-15-240-RWT-UMaineSemi/
+openfast_udl.xml

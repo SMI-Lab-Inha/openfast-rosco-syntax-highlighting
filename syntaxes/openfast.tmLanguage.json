@@ -18,6 +18,9 @@
       "include": "#file-opening"
     },
     {
+      "include": "#output-header-line"
+    },
+    {
       "include": "#full-line-comments"
     },
     {
@@ -75,6 +78,14 @@
         {
           "name": "markup.heading.openfast",
           "match": "\\A(?:[^\\r\\n]+(?:\\r?\\n|$)){1,2}"
+        }
+      ]
+    },
+    "output-header-line": {
+      "patterns": [
+        {
+          "name": "markup.heading.openfast",
+          "match": "^[A-Za-z][A-Za-z0-9 ,;()/_-]*:\\s+[^\t\r\n]+$"
         }
       ]
     },

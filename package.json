@@ -2,7 +2,7 @@
   "name": "openfast-rosco-syntax-highlighting",
   "displayName": "OpenFAST & ROSCO Syntax Highlighting",
   "description": "Syntax highlighting for OpenFAST input files and ROSCO controller input files in Visual Studio Code.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "SMI-Lab",
   "repository": {
     "type": "git",
