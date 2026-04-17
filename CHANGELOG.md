@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.7
+
+- Fixed inline `!` comment handling: parameter names inside `! ParameterName - description` style lines are now highlighted correctly while the description remains styled as a comment
+
 ## 0.0.6
 
 - Fixed inline `!` comments: now the full comment text after `!` is highlighted, not just the `!` character itself

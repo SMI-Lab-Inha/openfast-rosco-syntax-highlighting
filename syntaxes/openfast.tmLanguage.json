@@ -325,8 +325,21 @@
     "bang-comments": {
       "patterns": [
         {
-          "name": "comment.line.bang.openfast",
-          "match": "(?<=\\S)\\s+!.*$"
+          "begin": "(?<=\\s)(!)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.comment.openfast"
+            }
+          },
+          "end": "$",
+          "patterns": [
+            {
+              "include": "#parameter-names"
+            },
+            {
+              "include": "#trailing-descriptions"
+            }
+          ]
         }
       ]
     },
