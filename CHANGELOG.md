@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.8
+
+- Added support for OpenFAST linearization output files (`.lin`)
+- Linearization file header lines (e.g. `Simulation time: 400.0 s`) are now recognized and highlighted as headings
+
 ## 0.0.7
 
 - Fixed inline `!` comment handling: parameter names inside `! ParameterName - description` style lines are now highlighted correctly while the description remains styled as a comment

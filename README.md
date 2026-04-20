@@ -6,7 +6,7 @@ Unofficial VS Code extension for OpenFAST, ROSCO, and TurbSim input and output f
 
 ## Features
 
-- Syntax highlighting for OpenFAST-style text input files such as `.fst`, `.dat`, `.in`, `.inp`, `.out`, `.ipt`, `.ech`, `.wnd`, `.sum`, and `.bmi`
+- Syntax highlighting for OpenFAST-style text input files such as `.fst`, `.dat`, `.in`, `.inp`, `.out`, `.ipt`, `.ech`, `.wnd`, `.sum`, `.bmi`, and `.lin`
 - Support for common OpenFAST module files including AeroDyn, ElastoDyn, HydroDyn, InflowWind, MoorDyn, ServoDyn, SeaState, and related driver files
 - Support for ROSCO-style `DISCON.in` controller files
 - Support for TurbSim input files (`.inp`, and `.in`)

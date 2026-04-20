@@ -11,7 +11,8 @@
     "ech",
     "wnd",
     "sum",
-    "bmi"
+    "bmi",
+    "lin"
   ],
   "patterns": [
     {
@@ -85,7 +86,7 @@
       "patterns": [
         {
           "name": "markup.heading.openfast",
-          "match": "^[A-Za-z][A-Za-z0-9 ,;()/_-]*:\\s+[^\t\r\n]+$"
+          "match": "^\\s*[A-Za-z][A-Za-z0-9 ,;()/_?-]*:(?:\\s+[^\\t\\r\\n]*)?$"
         }
       ]
     },
