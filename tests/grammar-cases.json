@@ -1,0 +1,182 @@
+[
+  {
+    "line": "Simulation time: 400.0 s",
+    "expectations": [
+      {
+        "text": "Simulation time: 400.0 s",
+        "scopeIncludes": "markup.heading.openfast"
+      }
+    ]
+  },
+  {
+    "line": "False Echo           - Echo the input to <RootName>.ech (flag)",
+    "expectations": [
+      {
+        "text": "False",
+        "scopeIncludes": "constant.language.boolean.openfast"
+      },
+      {
+        "text": "Echo",
+        "scopeIncludes": "variable.parameter.openfast"
+      },
+      {
+        "text": "- Echo the input to <RootName>.ech (flag)",
+        "scopeIncludes": "comment.line.description.openfast"
+      },
+      {
+        "text": "(flag)",
+        "scopeIncludes": "storage.type.annotation.openfast"
+      }
+    ]
+  },
+  {
+    "line": "\"unused\"    BDBldFile(2)   - Name of file containing properties for blade 2",
+    "expectations": [
+      {
+        "text": "\"unused\"",
+        "scopeIncludes": "constant.language.special-value.quoted.openfast"
+      },
+      {
+        "text": "BDBldFile(2)",
+        "scopeIncludes": "variable.parameter.openfast"
+      }
+    ]
+  },
+  {
+    "line": "         2   NumBl           - Number of blades [1, 2, 3]",
+    "expectations": [
+      {
+        "text": "2",
+        "scopeIncludes": "constant.numeric.openfast"
+      },
+      {
+        "text": "NumBl",
+        "scopeIncludes": "variable.parameter.openfast"
+      },
+      {
+        "text": "[1, 2, 3]",
+        "scopeIncludes": "meta.brackets.options.openfast"
+      }
+    ]
+  },
+  {
+    "line": "---------------------- Mooring System ----------------------",
+    "expectations": [
+      {
+        "text": "---------------------- Mooring System ----------------------",
+        "scopeIncludes": "markup.heading.openfast"
+      }
+    ]
+  },
+  {
+    "line": "END of input file",
+    "expectations": [
+      {
+        "text": "END",
+        "scopeIncludes": "keyword.control.end.openfast"
+      }
+    ]
+  },
+  {
+    "line": "False    Echo    ! Echo - descriptive inline comment",
+    "expectations": [
+      {
+        "text": "Echo",
+        "scopeIncludes": "variable.parameter.openfast"
+      },
+      {
+        "text": "!",
+        "scopeIncludes": "punctuation.definition.comment.openfast"
+      },
+      {
+        "text": "- descriptive inline comment",
+        "scopeIncludes": "comment.line.description.openfast"
+      }
+    ]
+  },
+  {
+    "line": "Jacobian matrices: dYdu, dXdx, dXdu",
+    "expectations": [
+      {
+        "text": "Jacobian matrices: dYdu, dXdx, dXdu",
+        "scopeIncludes": "markup.heading.openfast"
+      }
+    ]
+  },
+  {
+    "line": "Azimuth: 12.5 deg",
+    "expectations": [
+      {
+        "text": "Azimuth: 12.5 deg",
+        "scopeIncludes": "markup.heading.openfast"
+      }
+    ]
+  },
+  {
+    "line": "vessel   Coupled   pinned   Fixed   Free",
+    "expectations": [
+      {
+        "text": "vessel",
+        "scopeIncludes": "keyword.other.moordyn.openfast"
+      },
+      {
+        "text": "Coupled",
+        "scopeIncludes": "keyword.other.moordyn.openfast"
+      },
+      {
+        "text": "pinned",
+        "scopeIncludes": "keyword.other.moordyn.openfast"
+      },
+      {
+        "text": "Fixed",
+        "scopeIncludes": "keyword.other.moordyn.openfast"
+      },
+      {
+        "text": "Free",
+        "scopeIncludes": "keyword.other.moordyn.openfast"
+      }
+    ]
+  },
+  {
+    "line": "1.0   KP         ! KP - Proportional gain",
+    "expectations": [
+      {
+        "text": "1.0",
+        "scopeIncludes": "constant.numeric.openfast"
+      },
+      {
+        "text": "!",
+        "scopeIncludes": "punctuation.definition.comment.openfast"
+      },
+      {
+        "text": "KP",
+        "scopeIncludes": "variable.parameter.openfast"
+      },
+      {
+        "text": "- Proportional gain",
+        "scopeIncludes": "comment.line.description.openfast"
+      }
+    ]
+  },
+  {
+    "line": "\"blade2.dat\"   BDBldFile(2)   ! BDBldFile(2) - blade property file",
+    "expectations": [
+      {
+        "text": "\"blade2.dat\"",
+        "scopeIncludes": "string.quoted.double.path.openfast"
+      },
+      {
+        "text": "BDBldFile(2)",
+        "scopeIncludes": "variable.parameter.openfast"
+      },
+      {
+        "text": "!",
+        "scopeIncludes": "punctuation.definition.comment.openfast"
+      },
+      {
+        "text": "- blade property file",
+        "scopeIncludes": "comment.line.description.openfast"
+      }
+    ]
+  }
+]

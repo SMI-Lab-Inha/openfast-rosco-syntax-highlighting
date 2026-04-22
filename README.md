@@ -50,17 +50,35 @@ It is designed to make engineering input decks easier to read without trying to 
 
 ## Development
 
-1. Open this folder in Visual Studio Code.
-2. Run `Extensions: Show Running Extensions`.
-3. Press `F5` to launch an Extension Development Host.
-4. Open an OpenFAST or ROSCO input file in the new window and verify highlighting.
+1. Install dependencies with `npm install`.
+2. Run `npm run test:grammar` to check the TextMate grammar against representative sample lines.
+3. Open this folder in Visual Studio Code.
+4. Press `F5` to launch an Extension Development Host.
+5. Open an OpenFAST or ROSCO input file in the new window and verify highlighting.
+
+## Tests
+
+The project includes a minimal grammar regression script in `scripts/test-grammar.mjs`.
+
+- Test cases live in `tests/grammar-cases.json`
+- Each case checks that a representative line tokenizes with the expected TextMate scope
+- Add a new case whenever you fix a highlighting bug or add support for a new OpenFAST-family pattern
+
+Run the checks with:
+
+```bash
+npm run test:grammar
+```
 
 ## Packaging
 
 To package for sharing or publication:
 
-1. Install `vsce`
-2. Run `vsce package`
+1. Install dependencies with `npm install`
+2. Run the grammar checks with `npm run test:grammar`
+3. Run `npm run package:vsix`
+
+Generated `.vsix` files are local build artifacts and should not be committed.
 
 ## Notes
 
