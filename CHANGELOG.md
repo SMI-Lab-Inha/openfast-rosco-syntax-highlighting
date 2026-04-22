@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.9
+
+- Added a lightweight grammar regression test suite for representative OpenFAST, ROSCO, MoorDyn, and linearization patterns
+- Improved contributor and packaging documentation for local validation and VSIX builds
+- Reduced the marketplace icon size so packaging completes without the large-icon warning
+
 ## 0.0.8
 
 - Added support for OpenFAST linearization output files (`.lin`)
